@@ -1,4 +1,15 @@
-﻿using System;
+﻿/// <summary>
+/// **********************************************
+/// * Inicio.xaml.cs
+/// *---------------------------------------------
+/// Descripción: Vista de inicio de aplicación
+///     El usuario puede interactuar con la ven-
+///     tana sin sufrir bloqueos propios de la UI
+/// Autor:  Fernando Gallego Fernández
+/// Rev:    1.0
+/// </summary>
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
