@@ -18,14 +18,32 @@ namespace RIMEI6.Model
     /// </summary>
     public class Terminal
     {
+        /// <summary>
+        /// TAC del terminal
+        /// </summary>
         public string TAC { get; set; }
+        /// <summary>
+        /// Nombre del terminal
+        /// </summary>
         public string Name { get; set; }
+        /// <summary>
+        /// Modelo del terminal
+        /// </summary>
         public string Model { get; set; }
+        /// <summary>
+        /// Sistema operativo del terminal
+        /// </summary>
         public string OS { get; set; }
+        /// <summary>
+        /// Fabricante del terminal
+        /// </summary>
         public string Manufacturer { get; set; }
         public string bookmark { get; set; }
         public string data { get; set; }
         public string datacsd { get; set; }
+        /// <summary>
+        /// Soporte OTA
+        /// </summary>
         public string datagprs { get; set; }
         public string email { get; set; }
         public string mmscsd { get; set; }
@@ -39,8 +57,6 @@ namespace RIMEI6.Model
         public string syncml { get; set; }
         public string imgprs { get; set; }
         public string pocgprs { get; set; }
-        public uint Frecuencia { get; set; }
-        public bool inDB { get; set; }
 
         /// <summary>
         /// Instancia de nuevo terminal.
@@ -48,10 +64,8 @@ namespace RIMEI6.Model
         /// <param name="tac">TAC del terminal</param>
         public Terminal(string tac)
         {
-            this.inDB = false;
             this.datagprs = "-";
             this.TAC = tac;
-            this.Frecuencia = 0;
             this.bookmark = "-";
             this.data = "-";
             this.datacsd = "-";
