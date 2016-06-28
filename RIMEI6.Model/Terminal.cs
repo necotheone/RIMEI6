@@ -1,11 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/// <summary>
+/// **********************************************
+/// * Terminal.cs
+/// *---------------------------------------------
+/// Descripción: Este fichero define los paráme-
+///     tros básicos de un terminal almacenado
+///     en la BBDD de terminales. Contiene infor-
+///     mación sobre su TAC y tecnologías sopor-
+///     tadas, como OTA, web, etc...
+/// Autor:  Fernando Gallego Fernández
+/// Rev:    1.0
+/// </summary>
 
 namespace RIMEI6.Model
 {
+    /// <summary>
+    /// Clase descriptiva de Terminal
+    /// </summary>
     public class Terminal
     {
         public string TAC { get; set; }
@@ -32,6 +42,10 @@ namespace RIMEI6.Model
         public uint Frecuencia { get; set; }
         public bool inDB { get; set; }
 
+        /// <summary>
+        /// Instancia de nuevo terminal.
+        /// </summary>
+        /// <param name="tac">TAC del terminal</param>
         public Terminal(string tac)
         {
             this.inDB = false;
