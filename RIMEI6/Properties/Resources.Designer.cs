@@ -83,9 +83,29 @@ namespace RIMEI6.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondotigre {
+            get {
+                object obj = ResourceManager.GetObject("fondotigre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Free_Textures_33 {
             get {
                 object obj = ResourceManager.GetObject("Free_Textures_33", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pepsized_Blur_19 {
+            get {
+                object obj = ResourceManager.GetObject("Pepsized_Blur_19", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
