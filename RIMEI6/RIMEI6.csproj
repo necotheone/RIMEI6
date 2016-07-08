@@ -112,6 +112,10 @@
     <Content Include="DataBase\IMEIDB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\processing.gif" />
+    <Resource Include="Resources\loading2.gif" />
+    <Resource Include="Resources\loading.gif" />
+    <Resource Include="Resources\pie.gif" />
     <Resource Include="Resources\Pepsized_Blur_19.jpg" />
     <Resource Include="Resources\fondotigre.jpg" />
     <Resource Include="Resources\favicon.ico" />

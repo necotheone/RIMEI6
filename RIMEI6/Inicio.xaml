@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:local="clr-namespace:RIMEI6"
         mc:Ignorable="d"
         Title="RIMEI6" Height="350" Width="600" MinHeight="550" MinWidth="850" Icon="Resources/favicon.ico">
@@ -175,11 +176,6 @@
                     </TransformGroup>
                 </TextBox.RenderTransform>
             </TextBox>
-            <ProgressBar HorizontalAlignment="Left" Height="13" Margin="10,183,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180">
-                <ProgressBar.Effect>
-                    <DropShadowEffect/>
-                </ProgressBar.Effect>
-            </ProgressBar>
             <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="65" Margin="10,201,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Background="{x:Null}" BorderThickness="0"/>
             <Button x:Name="SelDirButton" Content="Selecciona&#xA;Directorio" HorizontalAlignment="Left" Margin="10,276,0,0" Grid.Row="1" VerticalAlignment="Top" Width="82" Height="39" FontWeight="Bold" FontFamily="Calibri" Click="SelDirButton_Click">
                 <Button.Effect>
@@ -217,11 +213,15 @@
                 <ColumnDefinition Width="10*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="4*"/>
+                <RowDefinition Height="63*"/>
                 <RowDefinition Height="103"/>
-                <RowDefinition Height="9*"/>
+                <RowDefinition Height="188"/>
+                <RowDefinition Height="64"/>
+                <RowDefinition Height="19*"/>
             </Grid.RowDefinitions>
-            <Label x:Name="label8" Content="CARGANDO" Margin="24,10,22,15" FontSize="48" FontWeight="Bold" FontFamily="Segoe UI Black" Grid.Row="1" Grid.Column="1" Foreground="White"/>
+            <Label x:Name="label8" Content="CARGANDO" Margin="24,10,22,15" FontSize="48" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="Segoe UI Black" Grid.Row="1" Grid.Column="1" Foreground="White"/>
+            <Image gif:ImageBehavior.AnimatedSource="Resources/processing.gif" x:Name="gifCarga" Grid.Column="1" Margin="118,42,115,42" Grid.Row="2"/> 
+            <Label x:Name="statusLabel" Grid.Column="1" HorizontalAlignment="Center" FontFamily="Segoe UI Black" FontSize="22" Foreground="White" Margin="24,10,0,0" Grid.Row="3"/>
         </Grid>
 
     </Grid>
