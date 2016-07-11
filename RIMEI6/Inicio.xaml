@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:vm="clr-namespace:RIMEI6.ViewModel"
         xmlns:local="clr-namespace:RIMEI6"
         mc:Ignorable="d"
         Title="RIMEI6" Height="350" Width="600" MinHeight="550" MinWidth="850" Icon="Resources/favicon.ico">

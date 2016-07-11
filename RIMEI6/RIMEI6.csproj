@@ -63,6 +63,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\Inicio.cs" />
     <Page Include="Inicio.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -123,6 +124,12 @@
     <Resource Include="Resources\Free-Textures-33.jpg" />
     <Resource Include="Resources\Rlogo.jpg" />
     <Resource Include="Resources\Rlogo2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RIMEI6.Model\RIMEI6.Model.csproj">
+      <Project>{e9659a39-f93c-405f-9bf8-ff872d8b258c}</Project>
+      <Name>RIMEI6.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

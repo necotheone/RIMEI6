@@ -12,6 +12,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,8 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RIMEI6.Model;
+using System.ComponentModel;
 
 namespace RIMEI6
 {
@@ -34,9 +37,16 @@ namespace RIMEI6
     /// </summary>
     public partial class Inicio : Window
     {
+        // Variables globales de programa.
+        // Definición de la tarea en segundo plano
+        private readonly BackgroundWorker lecturaFicheros = new BackgroundWorker();
+
+
         public Inicio()
         {
             InitializeComponent();
+            var vm = new ViewModel.Inicio {};
+            DataContext = vm;
         }
 
         private void SelDirButton_Click(object sender, RoutedEventArgs e)
@@ -47,17 +57,13 @@ namespace RIMEI6
             da.Duration = new Duration(TimeSpan.FromSeconds(0.5));
             gifGrid.BeginAnimation(Grid.OpacityProperty, da);
             gifGrid.Visibility = Visibility.Visible;
-            // Esta función se ejecuta después de que el usuario haga click en el botón de sele-
-            // ccionar ficheros a leer. La función se encarga de crear la cola de archivos a leer
-            // y de preparar el contexto para la ejecución de la lectura en segundo plano.
-            var dialogDirectory = new FolderBrowserDialog();
-            dialogDirectory.Description = "Selecciona el directorio de análisis";
-            dialogDirectory.ShowNewFolderButton = false;
-            DialogResult resultDir = dialogDirectory.ShowDialog();
-            if (dialogDirectory.SelectedPath != "")
+            Ficheros fi = new Ficheros();
+            var result = fi.leeFicheros();
+            if (result)
             {
 
-            }else
+            }
+            else
             {
                 da.From = 1;
                 da.To = 0;
